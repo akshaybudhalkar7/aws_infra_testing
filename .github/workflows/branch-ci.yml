@@ -1,0 +1,22 @@
+name: deployment.branch.tick-101
+
+on:
+  push:
+    branches:
+      - tick-101
+
+permissions: :
+  id-token: write
+  contents: read
+
+jobs:
+  job-sbx:
+    uses: ./github/workflows/deployment-template.yml
+    secrets: inherit
+    with:
+      region: us-east-1
+      account: account_name
+      account_number: number
+      environment: sbx
+
+

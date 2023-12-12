@@ -1,0 +1,32 @@
+name:  Deployment Template
+
+on:
+  workflow_call:
+    inputs:
+      region:
+        required: true
+        default: us-east-1
+        type: string
+      account:
+        required: true
+        type: string
+      account_number:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          role-to-assume: arn:aws+iam::${{inputs.account_number}}:role/${{inputs.environment}}--test-oidc-role
+          aws-region: ${{input.region}}
