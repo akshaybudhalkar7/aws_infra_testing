@@ -15,8 +15,8 @@ jobs:
     secrets: inherit
     with:
       region: us-east-1
-      account: account_name
-      account_number: number
+      account: snowman
+      account_number: 441058194263
       environment: sbx
 
 
