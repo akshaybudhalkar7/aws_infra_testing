@@ -46,7 +46,7 @@ jobs:
 
       - name: Install aws cdk
         run: npm install -g aws-cdk@2.40.0
-#
+
 #      - name: Run cdk synth
 #        run: cdk synth ${{inputs.account}}
 #
