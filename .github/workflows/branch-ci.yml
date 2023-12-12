@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   job-sbx:
-    uses: ./github/workflows/deployment-template.yml
+    uses: ./.github/workflows/deployment-template.yml
     secrets: inherit
     with:
       region: us-east-1
