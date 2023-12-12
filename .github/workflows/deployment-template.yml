@@ -29,4 +29,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           role-to-assume: arn:aws:iam::${{inputs.account_number}}:role/${{inputs.environment}}--test-oidc-role
-          aws-region: ${{input.region}}
+          aws-region: ${{inputs.region}}
