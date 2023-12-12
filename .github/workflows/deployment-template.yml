@@ -31,26 +31,26 @@ jobs:
           role-to-assume: arn:aws:iam::${{inputs.account_number}}:role/${{inputs.environment}}-test-oidc-role
           aws-region: ${{inputs.region}}
 
-#      - name: Setup Python 3.8
-#        uses: actions/setup-python@v4.3.0
-#        with:
-#          python-version: '3.8'
+      - name: Setup Python 3.8
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: '3.8'
 
       - name: Install Dependencies
-        uses: pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-#      - name: Setup Node
-#        uses: actions/setup-node@v3.5.1
-#        with:
-#          node-version: latest
+      - name: Setup Node
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: latest
 
       - name: Install aws cdk
-        uses: npm install -g aws-cdk@2.40.0
+        run: npm install -g aws-cdk@2.40.0
 
       - name: Run cdk synth
-        uses: cdk synth ${{inputs.account}}
+        run: cdk synth ${{inputs.account}}
 
       - name: Run Deployment
-        uses: cdk deploy ${{inputs.account}} --require-approval never --verbose
+        run: cdk deploy ${{inputs.account}} --require-approval never --verbose
 
 
