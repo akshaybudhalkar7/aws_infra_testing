@@ -1,9 +1,9 @@
-name: deployment.branch.tick-101
+name: deployment.branch.tick-102
 
 on:
   push:
     branches:
-      - tick-101
+      - tick-102
 
 permissions: :
   id-token: write
