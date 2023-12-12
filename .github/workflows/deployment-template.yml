@@ -28,5 +28,5 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
-          role-to-assume: arn:aws+iam::${{inputs.account_number}}:role/${{inputs.environment}}--test-oidc-role
+          role-to-assume: arn:aws:iam::${{inputs.account_number}}:role/${{inputs.environment}}--test-oidc-role
           aws-region: ${{input.region}}
