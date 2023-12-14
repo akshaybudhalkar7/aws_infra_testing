@@ -10,5 +10,5 @@ class S3Stack(Stack):
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        s3 = _s3.Bucket(self, "s3bucket")
+        s3 = _s3.Bucket(self, "s3bucket6432889")
 
