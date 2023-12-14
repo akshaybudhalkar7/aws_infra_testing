@@ -1,11 +1,9 @@
 from aws_cdk import (
     aws_s3 as _s3,
-    aws_s3_notifications,
     Stack
 )
 
 from constructs import Construct
-
 
 
 class S3Stack(Stack):
