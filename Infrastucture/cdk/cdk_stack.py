@@ -1,1 +1,15 @@
-from aws_cdk import (Stack, Duration, Tags, aws_iam, aws_lambda, aws_s3)
+from aws_cdk import (
+    aws_s3 as _s3,
+    aws_s3_notifications,
+    Stack
+)
+
+from constructs import Construct
+
+
+class S3Stack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
+        super().__init__(scope, id, **kwargs)
+
+        s3 = _s3.Bucket(self, "s3bucket")
+
