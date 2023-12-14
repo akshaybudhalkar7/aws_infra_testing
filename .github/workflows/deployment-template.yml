@@ -40,7 +40,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Setup Node
-        uses: actions/setup-node@v21.0.0
+        uses: actions/setup-node@v21.4.0
         with:
           node-version: latest
 
