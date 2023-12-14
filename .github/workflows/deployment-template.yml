@@ -50,6 +50,7 @@ jobs:
       - name: Run cdk synth
         run: cdk synth ${{inputs.account}}
 
+
       - name: Run Deployment
         run: cdk deploy ${{inputs.account}} --require-approval never --verbose
 
