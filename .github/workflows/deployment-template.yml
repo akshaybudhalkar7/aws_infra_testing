@@ -32,17 +32,17 @@ jobs:
           aws-region: ${{inputs.region}}
 
       - name: Setup Python 3.8
-        uses: actions/setup-python@v3.5.1
+        uses: actions/setup-python@v4.3.0
         with:
-          python-version: latest
+          python-version: 3.8
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@.5.1
         with:
-          node-version: "18"
+          node-version: latest
 
       - name: Install aws cdk
         run: npm install -g aws-cdk@2.40.0
