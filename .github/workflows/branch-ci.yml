@@ -15,7 +15,7 @@ jobs:
     secrets: inherit
     with:
       region: us-east-1
-      account: sbx-aws_infra_testing
+      account: sbx-aws-infra-testing
       account_number: 441058194263
       environment: sbx
 
