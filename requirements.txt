@@ -1,3 +1,4 @@
 boto3==1.24.3
 aws-cdk-lib==2.40.0
 constructs>=10.1.93
+requests==2.31.0
