@@ -30,7 +30,7 @@ class S3Stack(Stack):
             'HelloHandler',
             runtime= aws_lambda.Runtime.PYTHON_3_7,
             code=aws_lambda.Code.from_asset(path.join(path.dirname(__file__), '..', '..', 'lambda_app')),
-            handler='app.handler',
+            handler='app.lambda_handler',
             function_name='test_app',
             role= lambda_role
         )
